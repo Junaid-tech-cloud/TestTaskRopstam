@@ -25,7 +25,6 @@ const Cars = (props) => {
         make: Yup.string().required('Please enter a  make'),
         model: Yup.string().required('Please enter a  model'),
         registrationNo: Yup.number('Please enter a valid number').required('Please enter a  registration number').positive('please enter a positive number'),
-        // Yup.string().required('Please enter a  registration number')
     });
 
     const handleSave = async () => {
