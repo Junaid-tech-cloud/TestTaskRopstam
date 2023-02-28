@@ -47,7 +47,7 @@ const SignInScreen = () => {
       />
       {error ? <Text style={styles.error}>{error}</Text> : null}
       <Button title="Sign In" onPress={handleSignIn} />
-      <Text style={styles.footer}>Don't have an account? <Text onPress={() => navigation.navigate('SignUp')}>Sign up here</Text></Text>
+      <Text style={styles.footer}>Don't have an account? <Text onPress={() => navigation.navigate('SignUpScreen')}>Sign up here</Text></Text>
     </View>
   );
 }

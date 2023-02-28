@@ -20,11 +20,12 @@ const Cars = (props) => {
     const [registrationNo, setRegistrationNo] = useState('');
 
     const schema = Yup.object().shape({
-        categorySelected: Yup.string().required('Category is required'),
+        categorySelected: Yup.string().required('please Select a Category is required'),
         color: Yup.string().required('Please enter a  color'),
         make: Yup.string().required('Please enter a  make'),
         model: Yup.string().required('Please enter a  model'),
-        registrationNo: Yup.string().required('Please enter a  registration number')
+        registrationNo: Yup.number('Please enter a valid number').required('Please enter a  registration number').positive('please enter a positive number'),
+        // Yup.string().required('Please enter a  registration number')
     });
 
     const handleSave = async () => {
